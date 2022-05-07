@@ -1,7 +1,6 @@
 using Application.Interfaces;
 using Domain;
 using Microsoft.EntityFrameworkCore;
-using Persistence.Configuration;
 using Persistence.EntitiesConfiguration;
 
 namespace Persistence;
