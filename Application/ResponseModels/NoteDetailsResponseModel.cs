@@ -1,6 +1,9 @@
+using Application.Common.Mappings;
+using Domain;
+
 namespace Application.NoteBooks.ResponseModels;
 
-public class NoteDetailsResponseModel
+public class NoteDetailsResponseModel : IMapFrom<Note>
 {
     public Guid Id { get; set; }
     public DateTime CreationDate { get; set; }

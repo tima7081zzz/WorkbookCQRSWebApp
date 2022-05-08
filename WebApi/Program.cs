@@ -1,19 +1,24 @@
+using System.Reflection;
 using Application;
 using Application.Common.Mappings;
+using Application.Interfaces;
 using AutoMapper;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 //Add services
+builder.Services.AddAutoMapper(config =>
+{
+    config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
+    config.AddProfile(new AssemblyMappingProfile(typeof(IWorkBookDbContext).Assembly));
+});
 
 void ConfigurationMapperAction(IMapperConfigurationExpression cfg)
 {
     //create local mappers
 }
 
-var mapperConfig = new MapperConfiguration(AutoMapperConfig.RegisterMappers(ConfigurationMapperAction));
-var mapper = mapperConfig.CreateMapper();
-builder.Services.AddSingleton(c => mapper);
+//var mapperConfig = new MapperConfiguration(AutoMapperConfig.RegisterMappers(ConfigurationMapperAction));
 
 builder.Services.AddApplication();
 builder.Services.AddPersistance(builder.Configuration);
