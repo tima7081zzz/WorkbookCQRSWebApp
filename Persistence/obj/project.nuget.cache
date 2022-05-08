@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "u5dUWngyKD0x81PnXpfKoXEQZzUtTMAZ582fodaOBiYjmWfXAmurLIQbujI8O/s/E7Kw3HruqzmHowYbDsPcvw==",
+  "dgSpecHash": "f54+MKSYoPXS/bLCr920ZyV71eaYEqQ3JW1kkJuY8/ljfcWKPxlSYV2Oce40CgfTd7b39msmJvjXWupIUa4qQA==",
   "success": true,
   "projectFilePath": "D:\\MY PROGS AMA GANGSTA NAH\\workbook\\WorkBook\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TIMA\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\TIMA\\.nuget\\packages\\fluentvalidation\\11.0.1\\fluentvalidation.11.0.1.nupkg.sha512",
+    "C:\\Users\\TIMA\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.1\\fluentvalidation.dependencyinjectionextensions.11.0.1.nupkg.sha512",
     "C:\\Users\\TIMA\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\TIMA\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\TIMA\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

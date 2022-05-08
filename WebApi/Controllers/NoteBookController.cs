@@ -1,6 +1,10 @@
 using Application.NoteBooks.Commands;
+using Application.NoteBooks.Commands.CreateNoteBook;
+using Application.NoteBooks.Commands.DeleteNoteBook;
+using Application.NoteBooks.Commands.UpdateNoteBook;
 using Application.NoteBooks.Queries;
-using Application.ResponseModels;
+using Application.NoteBooks.Queries.GetNoteBookDetails;
+using Application.NoteBooks.Queries.GetNoteBookList;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models.RequestModels;
 

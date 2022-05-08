@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Vp0bjacJ3/UiW52GOLcCQSLF70AHMB7CfpPRSKj5TH1UUNKZgnvLFdcsyL7ojnn4aTqH60MgOIbIOdyhoJJ4dw==",
+  "dgSpecHash": "NotmhalMpC0QVxSSCzhWblj6MPT4ev00S6x0v7uLJs15GlGq98L/BpeDt9dQB7Tidxu/EfL99h2HdPl43+gKvQ==",
   "success": true,
   "projectFilePath": "D:\\MY PROGS AMA GANGSTA NAH\\workbook\\WorkBook\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TIMA\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\TIMA\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\TIMA\\.nuget\\packages\\fluentvalidation\\11.0.1\\fluentvalidation.11.0.1.nupkg.sha512",
+    "C:\\Users\\TIMA\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.1\\fluentvalidation.dependencyinjectionextensions.11.0.1.nupkg.sha512",
     "C:\\Users\\TIMA\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\TIMA\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\TIMA\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
