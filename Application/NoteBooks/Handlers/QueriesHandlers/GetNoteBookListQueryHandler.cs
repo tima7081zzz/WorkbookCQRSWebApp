@@ -2,7 +2,6 @@ using Application.Common.Exceptions;
 using Application.DTOs;
 using Application.Interfaces;
 using Application.NoteBooks.Queries;
-using Application.NoteBooks.ResponseModels;
 using Application.ResponseModels;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;

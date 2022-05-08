@@ -1,4 +1,3 @@
-using Application.NoteBooks.ResponseModels;
 using Application.ResponseModels;
 using MediatR;
 
