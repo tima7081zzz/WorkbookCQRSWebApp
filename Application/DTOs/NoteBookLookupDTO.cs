@@ -7,4 +7,5 @@ public class NoteBookLookupDto : IMapWith<NoteBook>
 {
     public Guid Id { get; set; }
     public string? Title { get; set; }
+
 }

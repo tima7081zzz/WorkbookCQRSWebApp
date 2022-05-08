@@ -1,8 +1,8 @@
-using Application.NoteBooks.Commands;
 using Application.NoteBooks.Queries;
 using Application.Notes.Commands;
 using Application.ResponseModels;
 using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Models.RequestModels;
 
 namespace WebApplication1.Controllers;
 
@@ -10,24 +10,26 @@ namespace WebApplication1.Controllers;
 public class NoteController : BaseController
 {
     [HttpGet]
-    public async Task<ActionResult<NoteListResponseModel>> GetAll([FromBody] Guid model)
+    [Route("{noteBookId:guid}/GetAll")]
+    public async Task<ActionResult<NoteListResponseModel>> GetAll(Guid noteBookId)
     {
         var query = new GetNoteListQuery
         {
-            NoteBookId = model,
+            NoteBookId = noteBookId,
         };
         var response = await Mediator.Send(query);
 
         return Ok(response);
     }
 
-    [HttpGet("{id}")]
-    public async Task<ActionResult<NoteListResponseModel>> Get(Guid id, [FromBody] Guid noteBookId)
+    [HttpGet]
+    [Route("{noteId:guid}/Get")]
+    public async Task<ActionResult<NoteListResponseModel>> Get(Guid noteId, [FromBody] Guid noteBookId)
     {
         var query = new GetNoteDetailsQuery
         {
             NoteBookId = noteBookId,
-            Id = id,
+            Id = noteId,
         };
         var response = await Mediator.Send(query);
 
@@ -35,9 +37,17 @@ public class NoteController : BaseController
     }
 
     [HttpPost]
-    public async Task<ActionResult<Guid>> Create([FromBody] CreateNoteCommand query)
+    [Route("{noteBookId:guid}/Create")]
+    public async Task<ActionResult<Guid>> Create(Guid noteBookId, [FromBody] CreateNoteRequestModel model)
     {
+        var query = new CreateNoteCommand
+        {
+            Title = model.Title,
+            Text = model.Text,
+            NoteBookId = noteBookId,
+        };
         var response = await Mediator.Send(query);
+
         return Ok(response);
     }
 
@@ -49,11 +59,12 @@ public class NoteController : BaseController
     }
 
     [HttpDelete]
-    public async Task<ActionResult> Delete(Guid id)
+    [Route("{noteId:guid}/Create")]
+    public async Task<ActionResult> Delete(Guid noteId)
     {
         var query = new DeleteNoteCommand
         {
-            Id = id,
+            Id = noteId,
         };
         await Mediator.Send(query);
         return Ok();
