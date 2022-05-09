@@ -26,7 +26,7 @@ public class NoteBookController : BaseController
     }
 
     [HttpGet]
-    [Route("{id}")]
+    [Route("{id:guid}/Get")]
     public async Task<ActionResult<NoteBookDetailsResponseModel>> Get(Guid id)
     {
         var query = new GetNoteBookDetailsQuery
@@ -54,7 +54,7 @@ public class NoteBookController : BaseController
     }
 
     [HttpPut]
-    [Route("{id}")]
+    [Route("{id:guid}/Update")]
     public async Task<ActionResult<Guid>> Update(Guid id, [FromBody] CreateNoteBookRequestModel model)
     {
         var query = new UpdateNoteBookCommand
@@ -70,7 +70,7 @@ public class NoteBookController : BaseController
     }
 
     [HttpDelete]
-    [Route("{id}")]
+    [Route("{id:guid}/Delete")]
     public async Task<ActionResult<Guid>> Delete(Guid id)
     {
         var query = new DeleteNoteBookCommand
