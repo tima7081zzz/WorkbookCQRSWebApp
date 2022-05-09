@@ -4,6 +4,7 @@ using Application.Common.Mappings;
 using Application.Interfaces;
 using AutoMapper;
 using Persistence;
+using WebApplication1.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 //Add services
@@ -36,6 +37,8 @@ builder.Services.AddControllers();
 var app = builder.Build();
 
 //create http request pipeline
+
+app.UseCustomExceptionHandler();
 app.UseRouting();
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
