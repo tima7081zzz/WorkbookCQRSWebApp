@@ -7,6 +7,7 @@ using Persistence;
 using WebApplication1.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
+
 //Add services
 builder.Services.AddAutoMapper(config =>
 {

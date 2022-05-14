@@ -11,9 +11,9 @@ public static class DependencyInjection
     {
         var connectionString = configuration["DbConnection"];
 
-        services.AddDbContext<WorkBookDbContext>(opt =>
+        services.AddDbContext<WorkBookDbContext>(options =>
         {
-            opt.UseSqlServer(connectionString!);
+            options.UseSqlServer(connectionString!, x => x.MigrationsHistoryTable("__EFMigrationsHistory", "dbo"));
         });
         services.AddScoped<IWorkBookDbContext>(provider => provider.GetService<WorkBookDbContext>()!);
 
