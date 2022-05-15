@@ -13,7 +13,7 @@ public static class DependencyInjection
 
         services.AddDbContext<WorkBookDbContext>(options =>
         {
-            options.UseSqlServer(connectionString!, x => x.MigrationsHistoryTable("__EFMigrationsHistory", "dbo"));
+            options.UseSqlServer(connectionString!);
         });
         services.AddScoped<IWorkBookDbContext>(provider => provider.GetService<WorkBookDbContext>()!);
 

@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration["DbConnection"];
 builder.Services.AddDbContext<AuthDbContext>(options =>
 {
-    options.UseSqlServer(connectionString!, x => x.MigrationsHistoryTable("__EFMigrationsHistory", "dbo"));
+    options.UseSqlServer(connectionString!);
 });
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(options =>

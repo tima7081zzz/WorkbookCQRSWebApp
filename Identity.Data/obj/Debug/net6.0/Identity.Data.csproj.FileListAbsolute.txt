@@ -1,0 +1,12 @@
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\bin\Debug\net6.0\Identity.Data.deps.json
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\bin\Debug\net6.0\Identity.Data.dll
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\bin\Debug\net6.0\ref\Identity.Data.dll
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\bin\Debug\net6.0\Identity.Data.pdb
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\obj\Debug\net6.0\Identity.Data.csproj.AssemblyReference.cache
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\obj\Debug\net6.0\Identity.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\obj\Debug\net6.0\Identity.Data.AssemblyInfoInputs.cache
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\obj\Debug\net6.0\Identity.Data.AssemblyInfo.cs
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\obj\Debug\net6.0\Identity.Data.csproj.CoreCompileInputs.cache
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\obj\Debug\net6.0\Identity.Data.dll
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\obj\Debug\net6.0\ref\Identity.Data.dll
+D:\MY PROGS AMA GANGSTA NAH\workbook\WorkBook\Identity.Data\obj\Debug\net6.0\Identity.Data.pdb

@@ -18,4 +18,18 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Identity.Data\obj\Identity.Data.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Identity.Data\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Identity.Data\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="IdentityData\obj\IdentityData.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="IdentityData\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="IdentityData\obj\project.packagespec.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Identity.Data\Identity.Data.csproj" />
+      <ProjectReference Include="..\Migrations\Migrations.csproj" />
+    </ItemGroup>
+
 </Project>
