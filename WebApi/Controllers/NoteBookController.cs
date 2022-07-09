@@ -1,16 +1,16 @@
-using Application.NoteBooks.Commands;
 using Application.NoteBooks.Commands.CreateNoteBook;
 using Application.NoteBooks.Commands.DeleteNoteBook;
 using Application.NoteBooks.Commands.UpdateNoteBook;
-using Application.NoteBooks.Queries;
 using Application.NoteBooks.Queries.GetNoteBookDetails;
 using Application.NoteBooks.Queries.GetNoteBookList;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models.RequestModels;
 
 namespace WebApplication1.Controllers;
 
 [Route("api/[controller]")]
+[Authorize]
 public class NoteBookController : BaseController
 {
     [HttpGet]

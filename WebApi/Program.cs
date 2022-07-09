@@ -3,6 +3,7 @@ using Application;
 using Application.Common.Mappings;
 using Application.Interfaces;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Persistence;
 using WebApplication1.Middleware;
 
@@ -24,6 +25,8 @@ void ConfigurationMapperAction(IMapperConfigurationExpression cfg)
 
 builder.Services.AddApplication();
 builder.Services.AddPersistance(builder.Configuration);
+builder.Services.AddControllers();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -33,7 +36,17 @@ builder.Services.AddCors(options =>
         policy.AllowAnyOrigin();
     });
 });
-builder.Services.AddControllers();
+
+builder.Services.AddAuthentication(config =>
+{
+    config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer("Bearer", options =>
+{
+    options.Authority = "https://localhost:7272;http://localhost:5272";
+    options.Audience = "WebApi";
+    options.RequireHttpsMetadata = false;
+});
 
 var app = builder.Build();
 
@@ -43,6 +56,8 @@ app.UseCustomExceptionHandler();
 app.UseRouting();
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseEndpoints(endp =>
 {
     endp.MapControllers();

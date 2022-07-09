@@ -10,7 +10,7 @@
       <PackageReference Include="IdentityServer4" Version="4.1.2" />
       <PackageReference Include="IdentityServer4.AspNetIdentity" Version="4.1.2" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -19,17 +19,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="Identity.Data\obj\Identity.Data.csproj.nuget.dgspec.json" />
-      <_ContentIncludedByDefault Remove="Identity.Data\obj\project.assets.json" />
-      <_ContentIncludedByDefault Remove="Identity.Data\obj\project.packagespec.json" />
-      <_ContentIncludedByDefault Remove="IdentityData\obj\IdentityData.csproj.nuget.dgspec.json" />
-      <_ContentIncludedByDefault Remove="IdentityData\obj\project.assets.json" />
-      <_ContentIncludedByDefault Remove="IdentityData\obj\project.packagespec.json" />
+      <ProjectReference Include="..\Identity.Data\Identity.Data.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Identity.Data\Identity.Data.csproj" />
-      <ProjectReference Include="..\Migrations\Migrations.csproj" />
+      <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Home\Privacy.cshtml" />
     </ItemGroup>
 
 </Project>
